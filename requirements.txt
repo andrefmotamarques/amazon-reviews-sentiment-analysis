@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+nltk
+stanza
+textblob
+gensim
+wordcloud
+transformers[torch]
+accelerate
+datasets
+tqdm
+torch
+jupyter

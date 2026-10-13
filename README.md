@@ -34,15 +34,26 @@ Macro F1 was used as the main metric because the dataset is imbalanced (about 70
 
 ```
 sentiment_analysis.ipynb   # full pipeline: preprocessing, models, evaluation
-report.pdf                 # full written report (Portuguese)
-data/                      # place the dataset files here (not included)
+data/                      # train and test reviews (amazon_reviews_train.csv, amazon_reviews_test.csv)
+report_en.pdf              # full written report (English)
+report_pt.pdf              # original report (Portuguese)
+requirements.txt           # Python dependencies
 ```
 
 ## How to run
 
-1. Put `amazon_reviews_train.csv`, `amazon_reviews_test.csv` and `NRC-lexicon.csv` in `data/`. The datasets were provided by the course and are not redistributed here.
-2. Install the main dependencies: `pandas scikit-learn nltk textblob vaderSentiment stanza gensim transformers torch wordcloud matplotlib seaborn`.
-3. Run `sentiment_analysis.ipynb`. The notebook keeps its outputs, so results can be read without re-running it.
+```bash
+pip install -r requirements.txt
+jupyter notebook sentiment_analysis.ipynb
+```
+
+Open the notebook from the repository folder; it reads the data from `data/`. The notebook keeps its outputs, so the results can be read without re-running it.
+
+Two parts need something that is not in the repository:
+- The lexicon approach uses the NRC Emotion Lexicon (`data/NRC-lexicon.csv`), which is not included.
+- The GPT-4o experiments need an OpenAI API key.
+
+Fine-tuning DistilBERT is much faster on a GPU.
 
 ## Tech stack
 
@@ -50,4 +61,4 @@ Python · pandas · scikit-learn · NLTK · Stanza · Gensim · Hugging Face Tra
 
 ## Team
 
-André Marques, Afonso Abreu and Afonso Claudino. The full report with the team's methodology and discussion is in [`report.pdf`](report.pdf) (Portuguese).
+André Marques, Afonso Abreu and Afonso Claudino. The full report with the team's methodology and discussion is in [`report_en.pdf`](report_en.pdf) (English) and [`report_pt.pdf`](report_pt.pdf) (original, Portuguese).
