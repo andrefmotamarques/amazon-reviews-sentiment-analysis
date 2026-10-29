@@ -50,7 +50,7 @@ jupyter notebook sentiment_analysis.ipynb
 Open the notebook from the repository folder; it reads the data from `data/`. The notebook keeps its outputs, so the results can be read without re-running it.
 
 Two parts need something that is not in the repository:
-- The lexicon approach uses the NRC Emotion Lexicon (`data/NRC-lexicon.csv`), which is not included.
+- The NRC EmoLex section uses the NRC Word-Emotion Association Lexicon. The copy used in the project is no longer available to me, so it is not included. It can be requested from its authors at the [NRC Emotion Lexicon page](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm) and saved as `data/NRC-lexicon.csv`. The rest of the notebook runs without it, and the saved outputs show the original results.
 - The GPT-4o experiments need an OpenAI API key.
 
 Fine-tuning DistilBERT is much faster on a GPU.
